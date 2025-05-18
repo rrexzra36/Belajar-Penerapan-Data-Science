@@ -1,7 +1,11 @@
+import os
 import joblib
 
-model = joblib.load("model/logistic_model.joblib")
-result_target = joblib.load("model/target_encoder.joblib")
+def load_model(filename):
+    return joblib.load(os.path.join(os.path.dirname(__file__), "model", filename))
+
+model = load_model("logistic_model.joblib")
+result_target = load_model("target_encoder.joblib")
 
 def prediction(data):
     """Making prediction

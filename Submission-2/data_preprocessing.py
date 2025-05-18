@@ -3,26 +3,26 @@ import joblib
 import numpy as np
 import pandas as pd
 
-def load_model(filename):
+def load_preprocessing(filename):
     return joblib.load(os.path.join(os.path.dirname(__file__), "model", filename))
 
-encoder_Tuition_fees_up_to_date = load_model("Tuition_fees_up_to_date_encoder.joblib")
-encoder_Scholarship_holder = load_model("Scholarship_holder_encoder.joblib")
-encoder_Debtor = load_model("Debtor_encoder.joblib")
-encoder_Displaced = load_model("Displaced_encoder.joblib")
-encoder_Daytime_evening_attendance = load_model("Daytime_evening_attendance_encoder.joblib")
-encoder_Gender = load_model("Gender_encoder.joblib")
+encoder_Tuition_fees_up_to_date = load_preprocessing("Tuition_fees_up_to_date_encoder.joblib")
+encoder_Scholarship_holder = load_preprocessing("Scholarship_holder_encoder.joblib")
+encoder_Debtor = load_preprocessing("Debtor_encoder.joblib")
+encoder_Displaced = load_preprocessing("Displaced_encoder.joblib")
+encoder_Daytime_evening_attendance = load_preprocessing("Daytime_evening_attendance_encoder.joblib")
+encoder_Gender = load_preprocessing("Gender_encoder.joblib")
 
-scaler_Admission_grade = load_model("Admission_grade_scaler.joblib")
-scaler_Curricular_units_1st_sem_approved = load_model("Curricular_units_1st_sem_approved_scaler.joblib")
-scaler_Curricular_units_1st_sem_credited = load_model("Curricular_units_1st_sem_credited_scaler.joblib")
-scaler_Curricular_units_1st_sem_enrolled = load_model("Curricular_units_1st_sem_enrolled_scaler.joblib")
-scaler_Curricular_units_1st_sem_grade = load_model("Curricular_units_1st_sem_grade_scaler.joblib")
-scaler_Curricular_units_2nd_sem_approved = load_model("Curricular_units_2nd_sem_approved_scaler.joblib")
-scaler_Curricular_units_2nd_sem_credited = load_model("Curricular_units_2nd_sem_credited_scaler.joblib")
-scaler_Curricular_units_2nd_sem_enrolled = load_model("Curricular_units_2nd_sem_enrolled_scaler.joblib")
-scaler_Curricular_units_2nd_sem_grade = load_model("Curricular_units_2nd_sem_grade_scaler.joblib")
-scaler_Previous_qualification_grade = load_model("Previous_qualification_grade_scaler.joblib")
+scaler_Admission_grade = load_preprocessing("Admission_grade_scaler.joblib")
+scaler_Curricular_units_1st_sem_approved = load_preprocessing("Curricular_units_1st_sem_approved_scaler.joblib")
+scaler_Curricular_units_1st_sem_credited = load_preprocessing("Curricular_units_1st_sem_credited_scaler.joblib")
+scaler_Curricular_units_1st_sem_enrolled = load_preprocessing("Curricular_units_1st_sem_enrolled_scaler.joblib")
+scaler_Curricular_units_1st_sem_grade = load_preprocessing("Curricular_units_1st_sem_grade_scaler.joblib")
+scaler_Curricular_units_2nd_sem_approved = load_preprocessing("Curricular_units_2nd_sem_approved_scaler.joblib")
+scaler_Curricular_units_2nd_sem_credited = load_preprocessing("Curricular_units_2nd_sem_credited_scaler.joblib")
+scaler_Curricular_units_2nd_sem_enrolled = load_preprocessing("Curricular_units_2nd_sem_enrolled_scaler.joblib")
+scaler_Curricular_units_2nd_sem_grade = load_preprocessing("Curricular_units_2nd_sem_grade_scaler.joblib")
+scaler_Previous_qualification_grade = load_preprocessing("Previous_qualification_grade_scaler.joblib")
 
 def data_preprocessing(data):
     """Preprocessing data
