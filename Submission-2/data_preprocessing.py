@@ -1,24 +1,28 @@
+import os
 import joblib
 import numpy as np
 import pandas as pd
 
-encoder_Tuition_fees_up_to_date = joblib.load("model/Tuition_fees_up_to_date_encoder.joblib")
-encoder_Scholarship_holder = joblib.load("model/Scholarship_holder_encoder.joblib")
-encoder_Debtor = joblib.load("model/Debtor_encoder.joblib")
-encoder_Displaced = joblib.load("model/Displaced_encoder.joblib")
-encoder_Daytime_evening_attendance = joblib.load("model/Daytime_evening_attendance_encoder.joblib")
-encoder_Gender = joblib.load("model/Gender_encoder.joblib")
+def load_model(filename):
+    return joblib.load(os.path.join(os.path.dirname(__file__), "model", filename))
 
-scaler_Admission_grade = joblib.load("model/Admission_grade_scaler.joblib")
-scaler_Curricular_units_1st_sem_approved = joblib.load("model/Curricular_units_1st_sem_approved_scaler.joblib")
-scaler_Curricular_units_1st_sem_credited = joblib.load("model/Curricular_units_1st_sem_credited_scaler.joblib")
-scaler_Curricular_units_1st_sem_enrolled = joblib.load("model/Curricular_units_1st_sem_enrolled_scaler.joblib")
-scaler_Curricular_units_1st_sem_grade = joblib.load("model/Curricular_units_1st_sem_grade_scaler.joblib")
-scaler_Curricular_units_2nd_sem_approved = joblib.load("model/Curricular_units_2nd_sem_approved_scaler.joblib")
-scaler_Curricular_units_2nd_sem_credited = joblib.load("model/Curricular_units_2nd_sem_credited_scaler.joblib")
-scaler_Curricular_units_2nd_sem_enrolled = joblib.load("model/Curricular_units_2nd_sem_enrolled_scaler.joblib")
-scaler_Curricular_units_2nd_sem_grade = joblib.load("model/Curricular_units_2nd_sem_grade_scaler.joblib")
-scaler_Previous_qualification_grade = joblib.load("model/Previous_qualification_grade_scaler.joblib")
+encoder_Tuition_fees_up_to_date = load_model("Tuition_fees_up_to_date_encoder.joblib")
+encoder_Scholarship_holder = load_model("Scholarship_holder_encoder.joblib")
+encoder_Debtor = load_model("Debtor_encoder.joblib")
+encoder_Displaced = load_model("Displaced_encoder.joblib")
+encoder_Daytime_evening_attendance = load_model("Daytime_evening_attendance_encoder.joblib")
+encoder_Gender = load_model("Gender_encoder.joblib")
+
+scaler_Admission_grade = load_model("Admission_grade_scaler.joblib")
+scaler_Curricular_units_1st_sem_approved = load_model("Curricular_units_1st_sem_approved_scaler.joblib")
+scaler_Curricular_units_1st_sem_credited = load_model("Curricular_units_1st_sem_credited_scaler.joblib")
+scaler_Curricular_units_1st_sem_enrolled = load_model("Curricular_units_1st_sem_enrolled_scaler.joblib")
+scaler_Curricular_units_1st_sem_grade = load_model("Curricular_units_1st_sem_grade_scaler.joblib")
+scaler_Curricular_units_2nd_sem_approved = load_model("Curricular_units_2nd_sem_approved_scaler.joblib")
+scaler_Curricular_units_2nd_sem_credited = load_model("Curricular_units_2nd_sem_credited_scaler.joblib")
+scaler_Curricular_units_2nd_sem_enrolled = load_model("Curricular_units_2nd_sem_enrolled_scaler.joblib")
+scaler_Curricular_units_2nd_sem_grade = load_model("Curricular_units_2nd_sem_grade_scaler.joblib")
+scaler_Previous_qualification_grade = load_model("Previous_qualification_grade_scaler.joblib")
 
 def data_preprocessing(data):
     """Preprocessing data
