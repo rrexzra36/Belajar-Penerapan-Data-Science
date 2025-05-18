@@ -6,7 +6,7 @@ from data_preprocessing import *
 from prediction import prediction
 
 #Setting page
-st.set_page_config(page_title="🎓 Students Performance", layout="wide")
+st.set_page_config(page_title="Students Performance", layout="wide")
 
 st.markdown("""
     <div style='margin-bottom: 50px; border-radius: 10px; text-align: center;'>
