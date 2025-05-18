@@ -59,7 +59,7 @@ https://lookerstudio.google.com/reporting/6f5fb664-e2e3-41f3-b152-074e527658d3
 Prototipe sistem Machine Learning ini dikembangkan menggunakan Streamlit dan dapat diakses melalui tautan berikut:
 
 ```
-asd
+https://jaya-jaya-students-performance.streamlit.app/
 ```
 Berikut adalah langkah-langkah untuk menjalankan aplikasinya:
 
