@@ -61,6 +61,13 @@ Prototipe sistem Machine Learning ini dikembangkan menggunakan Streamlit dan dap
 ```
 https://jaya-jaya-students-performance.streamlit.app/
 ```
+
+Atau dapat menjalankan prototipe Machine Learning ini secara lokal dengan cara berikut:
+```
+conda activate students-performance
+python -m streamlit run dashboard.py
+```
+
 Berikut adalah langkah-langkah untuk menjalankan aplikasinya:
 
 1. Isi formulir dengan data mahasiswa, seperti biaya pendidikan (*Tuition Fees*), status beasiswa (*Scholarship Holder*), jenis kelamin (*Gender*), jadwal kehadiran (*Attendance*), dan informasi lainnya.
